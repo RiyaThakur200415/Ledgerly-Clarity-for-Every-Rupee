@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #F7F5F0;
+    --bg-secondary: #EFECE5;
+    --bg-card: #FFFFFF;
+    --text-primary: #171717;
+    --text-muted: #6B6B6B;
+    --border-subtle: rgba(23, 23, 23, 0.08);
+    --accent-green: #173F35;
+    --accent-gold: #B89B5E;
+    --positive: #2D6A4F;
+    --negative: #9E2A2B;
+  }
+
+  .dark {
+    --bg-primary: #111311;
+    --bg-secondary: #191C19;
+    --bg-card: #1E231E;
+    --text-primary: #F4F1EA;
+    --text-muted: #A7AAA5;
+    --border-subtle: rgba(244, 241, 234, 0.08);
+    --accent-green: #245749;
+    --accent-gold: #CBB075;
+    --positive: #40916C;
+    --negative: #E05757;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-serif-heading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-ui {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom scrollbars for clean financial tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}

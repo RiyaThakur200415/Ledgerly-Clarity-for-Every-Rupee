@@ -1,0 +1,6 @@
+{
+  "name": "Ledgerly — Clarity for Every Rupee",
+  "description": "A classic, elegant personal finance management and expense tracking dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

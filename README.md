@@ -1,166 +1,299 @@
-# Ledgerly — Clarity for Every Rupee
+Ledgerly — Clarity for Every Rupee
+A classic, elegant full-stack personal finance & expense management platform.
 
-An elegant, production-grade full-stack personal finance and expense tracking web application. Built with a bespoke financial dashboard aesthetic inspired by modern private banking interfaces, featuring warm ivory surfaces, deep forest accents, Cormorant Garamond serif typography, and Indian Rupee (`₹`) monetary formatting.
+<p align="center">
+  <a href="https://ledgerly-clarity-for-every-rupee-2.onrender.com/">🚀 Live Demo</a>
+</p>
 
----
+✨ Overview
+Ledgerly is a production-grade full-stack personal finance and expense tracking application designed around a refined private-banking-inspired dashboard experience.
+It combines warm ivory surfaces, deep forest accents, elegant serif typography, high-density financial data tables, interactive analytics, and Indian Rupee (₹) formatting into one focused financial workspace.
+Ledgerly — Clarity for every rupee.
 
-## 1. Project Overview
+What Ledgerly helps you do
+- Track income and expenses
+- Monitor monthly cash flow
+- Understand category-wise spending
+- Set and monitor monthly budgets
+- Analyze savings and spending trends
+- Manage transactions securely
+- Export financial statements
+- Customize categories and account preferences
+🌐 Live Demo
+Open Ledgerly →
+🎯 Core Value Pillars
+◈ Zero-Pill Visual Discipline
+A refined interface that avoids unnecessary status-card clutter and uses clean typography, spacing, and separators for financial metadata.
+◈ Dynamic Ledger Mathematics
+Financial metrics are reconciled dynamically from transaction data, including:
+- Total balance
+- Monthly income
+- Monthly expenses
+- Monthly savings
+- Savings rate
+- Category spending distribution
+- Month-over-month changes
+◈ High-Density Data Grids
+A powerful transaction workspace with instant search, category filtering, income/expense filtering, date filtering, sorting, pagination, and CSV export.
+◈ Visual Financial Trajectories
+Interactive financial visualizations make spending patterns easier to understand through dual-line cash-flow charts, income vs. expense comparisons, time-range analysis, donut-based expense breakdowns, and savings-rate visualization.
+🚀 Key Features
+🔐 Full-Stack Authentication
+- JWT-based authentication
+- bcrypt password hashing
+- Persistent authenticated sessions
+- Protected REST API routes
+- One-click demo login for evaluation
+📊 Dynamic Financial Dashboard
+The dashboard provides an at-a-glance view of:
+- Total Balance
+- Monthly Income
+- Monthly Expenses
+- Monthly Savings
+- Month-over-month percentage changes
+All financial figures are calculated dynamically from transaction data.
+📈 Interactive Cash Flow Analytics
+Explore income and expenses across:
+- 7 Days
+- 30 Days
+- 3 Months
+- 6 Months
+- 1 Year
+The custom SVG dual-line chart includes interactive hover states and precise numerical tooltips.
+🍩 Expense Breakdown
+Visualize spending allocation across:
+- Food
+- Shopping
+- Transport
+- Bills
+- Health
+- Entertainment
+- Education
+- Custom categories
+💳 Transaction Management
+Complete CRUD functionality for:
+- Creating transactions
+- Editing transactions
+- Deleting transactions
+- Searching and filtering
+- Sorting and pagination
+- CSV statement export
+Supported types:
+- Income
+- Expense
+Supported payment methods:
+- UPI
+- Credit Card
+- Debit Card
+- Bank Transfer
+- Cash
+Destructive actions are protected by confirmation modals.
+🔎 Search, Filter & Sort
+Find records using:
+- Real-time description and notes search
+- Category filters
+- Transaction-type filters
+- Date filters
+- Newest / Oldest sorting
+- Highest / Lowest amount sorting
+- Pagination
+🎯 Budget Management
+Set monthly spending limits for individual categories and monitor utilization in real time.
+Budget states:
+- Healthy
+- Warning — 80%+
+- Exceeded
+🏷️ Custom Category Management
+Create and customize categories with:
+- Custom names
+- Hex color swatches
+- Icons
+Ledgerly also prevents deletion of categories currently referenced by transactions.
+🧠 Financial Analytics & Intelligence
+Ledgerly provides rule-based insights derived from transaction patterns:
+- Savings Rate gauge
+- Month-over-month spending velocity
+- Top spending streams
+- Category distribution
+- Dynamic financial observations
+⚙️ Account Governance & Preferences
+Manage:
+- Personal profile
+- Avatar preview
+- Base currency
+- Date format
+- Password
+- Application theme
+Supported currencies:
+INR ₹ · USD $ · EUR € · GBP £
+Themes:
+Classic Ivory Light · Obsidian Dark
+📤 Data Export
+Export transaction records as an RFC 4180-compliant CSV statement.
+🛠️ Tech Stack
+Layer	Technologies
+Frontend	React 19, TypeScript, Vite 8
+Styling	Tailwind CSS v4
+UI / Motion	Lucide React, Motion
+Backend	Node.js, Express 4, TypeScript
+Runtime	tsx
+Authentication	JSON Web Tokens, bcryptjs
+Database	Persistent JSON data engine
+AI / Integration	Google Gemini API
+Typography	Cormorant Garamond, Plus Jakarta Sans, JetBrains Mono
 
-**Ledgerly** ("Clarity for every rupee.") empowers discerning individuals to manage income, track multi-category expenditures, monitor monthly budget utilization, analyze cash flow velocity, and inspect multi-period financial trends.
 
-### Core Value Pillars
-- **Zero-Pill Visual Discipline**: Metadata presented cleanly with typographic separators (`·`, `/`) rather than cluttered status pill capsules.
-- **Dynamic Ledger Mathematics**: Real-time server-side reconciliation of total balance, monthly surplus, savings rate, and category spreads.
-- **High-Density Data Grids**: High-speed table with search, category filtering, type filtering, multi-attribute sorting, and one-click CSV statement export.
-- **Visual Trajectories**: Custom SVG curved multi-line cash flow charts and interactive donut breakdowns with center metrics.
-
----
-
-## 2. Key Features
-
-- **Full-Stack Authentication**: JWT authentication with bcrypt password hashing, persistent sessions, and 1-click evaluation demo login.
-- **Dynamic Financial Overview**:
-  - Total Balance, Monthly Income, Monthly Expenses, and Monthly Savings metric cards.
-  - Month-over-month percentage changes calculated dynamically from transactions.
-- **Interactive Dual-Line Cash Flow Chart**:
-  - Inspect Income vs Expense trends over 7 Days, 30 Days, 3 Months, 6 Months, or 1 Year.
-  - Interactive hover scrubbers with precise numeric tooltips.
-- **Expense Breakdown Donut**:
-  - Segmented arcs displaying spending allocation across Food, Shopping, Transport, Bills, Health, Entertainment, Education, etc.
-- **Transaction CRUD & Auditing**:
-  - Record, Edit, and Delete transactions with type (Income/Expense), category, date, and payment method (UPI, Credit Card, Debit Card, Bank Transfer, Cash).
-  - Explicit confirmation modal safeguards before destructive deletions.
-- **Comprehensive Search & Filters**:
-  - Real-time text search across descriptions and notes.
-  - Combined filters by category, transaction type, and date.
-  - Sorting by Newest, Oldest, Highest amount, and Lowest amount.
-  - Clean pagination.
-- **Budget Thresholds**:
-  - Set monthly spending ceilings per category.
-  - Real-time utilization progress bars with `Healthy`, `Warning (80%+)`, and `Exceeded` statuses.
-- **Category Management**:
-  - Create and customize custom categories with hex color swatches and icons.
-  - Automatic dependency protection preventing deletion of categories currently attached to active transactions.
-- **Financial Analytics & Intelligence**:
-  - Savings Rate gauge meter.
-  - Month-over-month velocity comparison.
-  - Ranked top spending streams.
-  - Rule-based dynamic insights derived from transaction patterns.
-- **Account Governance & Settings**:
-  - Personal profile management and avatar preview.
-  - Base currency preference (INR ₹, USD $, EUR €, GBP £).
-  - Date format preference.
-  - Obsidian Dark Mode / Classic Ivory Light Mode toggles.
-  - Secure bcrypt password updates.
-- **Data Export**:
-  - Instant CSV export formatted to RFC 4180 specifications.
-
----
-
-## 3. Tech Stack
-
-- **Frontend**: React 19, TypeScript, Vite 8, Tailwind CSS v4, Lucide React, Motion.
-- **Backend**: Node.js, Express 4, TypeScript (via `tsx`).
-- **Authentication**: JSON Web Tokens (`jsonwebtoken`), `bcryptjs`.
-- **Database**: Persistent JSON data engine with atomic disk flushing, relational querying, and auto-seeding.
-- **Typography**: Cormorant Garamond (Headings), Plus Jakarta Sans (UI body), JetBrains Mono (Tabular numerals).
-
----
-
-## 4. Folder Structure
-
-```
+Design Language
+Ledgerly follows a premium financial-dashboard aesthetic:
+- Warm Ivory surfaces
+- Deep Forest accents
+- Cormorant Garamond for editorial headings
+- Plus Jakarta Sans for UI content
+- JetBrains Mono for tabular financial numbers
+- Indian Rupee (₹) as the primary monetary format
+🏗️ Architecture
+Ledgerly
+│
+├── Frontend
+│   ├── React 19
+│   ├── TypeScript
+│   ├── Vite
+│   ├── Tailwind CSS
+│   └── Context-based application state
+│
+├── Backend
+│   ├── Node.js
+│   ├── Express
+│   ├── REST API
+│   ├── JWT Authentication
+│   └── bcrypt Password Security
+│
+├── Data Layer
+│   ├── Persistent JSON Database
+│   ├── Collection Managers
+│   ├── Atomic Disk Flushing
+│   └── Automatic Seed Data
+│
+└── Financial Intelligence
+    ├── Analytics Engine
+    ├── Budget Calculations
+    ├── Spending Insights
+    └── Transaction Reconciliation
+📁 Project Structure
+Ledgerly/
+│
 ├── data/
-│   └── ledgerly_db.json         # Persistent JSON database
+│   └── ledgerly_db.json
+│
 ├── server/
-│   ├── config/                  # Server configuration and environment
-│   ├── controllers/             # Express API controllers (auth, tx, analytics, budgets, categories)
-│   ├── db/                      # Database engine and collection managers
-│   ├── middleware/              # JWT auth and global error handling
-│   ├── routes/                  # Express REST routes
-│   └── services/                # Analytics engine and initial seed data
+│   ├── config/
+│   ├── controllers/
+│   ├── db/
+│   ├── middleware/
+│   ├── routes/
+│   └── services/
+│
 ├── src/
-│   ├── assets/images/           # High-resolution generated visual assets
+│   ├── assets/images/
 │   ├── components/
-│   │   ├── budgets/             # Budget modals and cards
-│   │   ├── categories/          # Category modals and pickers
-│   │   ├── dashboard/           # Metric cards, SVG dual-line chart, donut breakdown
-│   │   ├── layout/              # Persistent desktop sidebar, mobile drawer, top header
-│   │   └── transactions/        # Transaction table, modals, delete confirmations
-│   ├── context/                 # AuthContext, ThemeContext, ToastContext
-│   ├── pages/                   # Dashboard, Transactions, Analytics, Budgets, Categories, Settings, Profile, LandingAuth
-│   ├── services/                # Typed frontend API client
-│   ├── types/                   # TypeScript interfaces
-│   ├── utils/                   # Indian Rupee (₹) and date formatters
-│   ├── App.tsx                  # Root application router and shell
-│   └── index.css                # Tailwind configuration and theme variables
-├── server.ts                    # Full-stack server entry point (Express + Vite)
+│   │   ├── budgets/
+│   │   ├── categories/
+│   │   ├── dashboard/
+│   │   ├── layout/
+│   │   └── transactions/
+│   ├── context/
+│   ├── pages/
+│   ├── services/
+│   ├── types/
+│   ├── utils/
+│   ├── App.tsx
+│   └── index.css
+│
+├── server.ts
 ├── package.json
 └── tsconfig.json
-```
-
----
-
-## 5. Getting Started & Installation
-
-### Prerequisites
-- Node.js $\ge 18$
+⚡ Getting Started
+Prerequisites
+- Node.js 18+
 - npm or yarn
-
-### Installation
-```bash
+- Google Gemini API key for Gemini-powered functionality
+Installation
+git clone <your-repository-url>
+cd Ledgerly-Clarity-for-every-rupee
 npm install
-```
+Environment Variables
+Create a .env file:
+GEMINI_API_KEY=your_gemini_api_key
+JWT_SECRET=your_jwt_secret
+Never commit .env or expose API keys in a public repository.
 
-### Running in Development
-```bash
+Development
 npm run dev
-```
-The application will launch on `http://localhost:3000`.
-
-### Production Build
-```bash
+Application:
+http://localhost:3000
+Production Build
 npm run build
 npm start
-```
+👤 Demo Account
+For quick evaluation, use the built-in demo login.
+Email
+riya.kri.thakur2004@gmail.com
+Password
+password123
+You can also use Sign in as Demo on the authentication page.
+For production deployments, replace or disable demo credentials and use secure secrets.
 
----
+🔌 REST API
+Method	Endpoint	Description	Auth
+POST	/api/auth/register	Register a new user	No
+POST	/api/auth/login	Authenticate user	No
+GET	/api/auth/me	Fetch current profile	Yes
+PUT	/api/auth/profile	Update profile/preferences	Yes
+PUT	/api/auth/password	Change password	Yes
+GET	/api/transactions	Query transactions	Yes
+POST	/api/transactions	Create transaction	Yes
+GET	/api/transactions/:id	Fetch transaction	Yes
+PUT	/api/transactions/:id	Update transaction	Yes
+DELETE	/api/transactions/:id	Delete transaction	Yes
+GET	/api/transactions/export/csv	Export CSV statement	Yes
+GET	/api/analytics	Compute financial analytics	Yes
+GET	/api/budgets	Get budget utilization	Yes
+POST	/api/budgets	Create category budget	Yes
+PUT	/api/budgets/:id	Update budget	Yes
+DELETE	/api/budgets/:id	Delete budget	Yes
+GET	/api/categories	List categories	Optional
+POST	/api/categories	Create category	Yes
+PUT	/api/categories/:id	Update category	Yes
+DELETE	/api/categories/:id	Delete category	Yes
 
-## 6. Pre-Configured Demo Credentials
 
-For quick evaluation, click **"Sign in as Demo"** on the authentication page, or use:
-- **Email**: `riya.kri.thakur2004@gmail.com`
-- **Password**: `password123`
+🚢 Deployment
+The current live deployment is hosted on Render:
+https://ledgerly-clarity-for-every-rupee-2.onrender.com/
+Recommended Render configuration:
+Build Command:
+npm install && npm run build
 
----
-
-## 7. REST API Documentation
-
-| Method | Endpoint | Description | Auth Required |
-| :--- | :--- | :--- | :--- |
-| `POST` | `/api/auth/register` | Register new user account | No |
-| `POST` | `/api/auth/login` | Authenticate and obtain JWT token | No |
-| `GET` | `/api/auth/me` | Fetch authenticated user profile | Yes |
-| `PUT` | `/api/auth/profile` | Update user settings and preferences | Yes |
-| `PUT` | `/api/auth/password` | Change user password | Yes |
-| `GET` | `/api/transactions` | Query filtered & paginated transactions | Yes |
-| `POST` | `/api/transactions` | Record a new transaction | Yes |
-| `GET` | `/api/transactions/:id` | Fetch transaction by ID | Yes |
-| `PUT` | `/api/transactions/:id` | Update an existing transaction | Yes |
-| `DELETE` | `/api/transactions/:id` | Delete transaction from ledger | Yes |
-| `GET` | `/api/transactions/export/csv` | Download full statement as CSV | Yes |
-| `GET` | `/api/analytics` | Compute dynamic financial analytics | Yes |
-| `GET` | `/api/budgets` | Get monthly budget utilization | Yes |
-| `POST` | `/api/budgets` | Allocate new category budget | Yes |
-| `PUT` | `/api/budgets/:id` | Update category budget limit | Yes |
-| `DELETE` | `/api/budgets/:id` | Remove category budget | Yes |
-| `GET` | `/api/categories` | List default & custom categories | Optional |
-| `POST` | `/api/categories` | Add custom category | Yes |
-| `PUT` | `/api/categories/:id` | Edit custom category | Yes |
-| `DELETE` | `/api/categories/:id` | Delete custom category (validates usage) | Yes |
-
----
-
-## 8. License
-
-Apache-2.0
+Start Command:
+npm start
+Configure secrets through the hosting provider's environment-variable settings rather than committing them to Git.
+🔒 Security
+Ledgerly uses:
+- JWT authentication
+- bcrypt password hashing
+- Protected API routes
+- Server-side authorization middleware
+- Environment-based secret configuration
+- Confirmation safeguards for destructive operations
+- Category dependency validation
+For a larger production deployment, consider migrating from local JSON persistence to a managed database and persistent storage solution.
+📜 License
+This project is licensed under the Apache-2.0 License.
+👩‍💻 Author
+Riya Kumari
+Computer Science & Engineering
+VIT-AP University
+<p align="center">
+  <strong>Ledgerly</strong><br>
+  <em>Clarity for every rupee.</em>
+</p>

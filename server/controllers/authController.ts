@@ -1,9 +1,9 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { db } from '../db/database.ts';
 import { config } from '../config/config.ts';
-import { AuthRequest } from '../middleware/authMiddleware.ts';
+import type { AuthRequest } from '../middleware/authMiddleware.ts';
 
 const generateToken = (userId: string, email: string, name: string) => {
   return jwt.sign({ userId, email, name }, config.jwtSecret, { expiresIn: '7d' });

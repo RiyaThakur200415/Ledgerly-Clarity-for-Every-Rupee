@@ -1,6 +1,6 @@
-import { Response } from 'express';
+import type { Response } from 'express';
 import { db } from '../db/database.ts';
-import { AuthRequest } from '../middleware/authMiddleware.ts';
+import type { AuthRequest } from '../middleware/authMiddleware.ts';
 
 export const getAnalytics = async (req: AuthRequest, res: Response) => {
   try {
